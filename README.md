@@ -1,16 +1,28 @@
-# product_lisiting
+# Product Listing Flutter App
 
-A new Flutter project.
+A Flutter e-commerce app with authentication, product browsing, wishlist, and profile management.
 
-## Getting Started
+## Features
+- Phone login with OTP verification
+- Product listing with search
+- Wishlist management
+- User profile
+- Custom bottom navigation
 
-This project is a starting point for a Flutter application.
+## Setup
+1. Clone the repo
+2. Run `flutter pub get`
+3. Update API URL in `lib/core/constants/app_constants.dart`
+4. Run `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
+- Flutter & Dart
+- BLoC for state management
+- Clean Architecture
+- API: skilltestflutter.zybotechlab.com
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
+*Add 2-3 screenshots of your app here*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Author
+Deepak
