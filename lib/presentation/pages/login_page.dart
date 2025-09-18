@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                       color: Colors.grey[600],
                     ),
                   ),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 40),
                   CustomTextField(
                     controller: _phoneController,
                     hintText: AppStrings.enterPhone,
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                       return null;
                     },
                   ),
-                  const Spacer(),
+                   const SizedBox(height: 30,),
                   BlocBuilder<AuthBloc, AuthState>(
                     builder: (context, state) {
                       return CustomButton(

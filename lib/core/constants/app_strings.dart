@@ -15,8 +15,6 @@ class AppStrings {
   static const String resend = 'Re-send';
   static const String submit = 'Submit';
 
-  static const String registration = 'Registration';
-  static const String enterName =  'Enter your name to complete registration';
   static const String firstName = 'First Name';
   static const String register = 'Register';
 }

@@ -11,6 +11,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   }) : super(ProfileInitial()) {
     on<LoadProfile>(_onLoadProfile);
     on<RefreshProfile>(_onRefreshProfile);
+
+    add(LoadProfile());
   }
 
   Future<void> _onLoadProfile(

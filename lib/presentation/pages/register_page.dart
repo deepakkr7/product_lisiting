@@ -77,49 +77,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 20),
-                      Text(
-                        AppStrings.registration,
-                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(height: AppConstants.smallPadding),
-                      Text(
-                        AppStrings.enterName,
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                      const SizedBox(height: AppConstants.largePadding),
-
-                      // Phone number display (read-only)
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: Colors.grey[300]!),
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(Icons.phone, color: Colors.grey[600]),
-                            const SizedBox(width: 12),
-                            Text(
-                              '+91 ${widget.phoneNumber}',
-                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            const Spacer(),
-                            Icon(Icons.verified, color: Colors.green[600], size: 20),
-                          ],
-                        ),
-                      ),
-
-                      const SizedBox(height: AppConstants.defaultPadding),
-
                       // Name input field
                       CustomTextField(
                         controller: _nameController,
@@ -137,7 +94,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         },
                       ),
 
-                      const Spacer(),
+                      const SizedBox(height: 30,),
 
                       BlocBuilder<AuthBloc, AuthState>(
                         builder: (context, state) {

@@ -92,56 +92,29 @@ class ProfilePageView extends StatelessWidget {
   Widget _buildProfileContent(BuildContext context, UserProfile userProfile) {
     return SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Name Section
-            _buildProfileField(
-              label: 'Name',
-              value: userProfile.name,
-            ),
-
-            const SizedBox(height: 20),
-
-            // Phone Section
-            _buildProfileField(
-              label: 'Phone',
-              value: userProfile.phoneNumber,
-            ),
-
-            // Additional spacing
-            const SizedBox(height: 40),
-
-            // Logout Button
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  _showLogoutDialog(context);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red[50],
-                  foregroundColor: Colors.red[700],
-                  elevation: 0,
-                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    side: BorderSide(color: Colors.red[200]!),
-                  ),
-                ),
-                child: const Text(
-                  'Logout',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+      child: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Name Section
+              _buildProfileField(
+                label: 'Name',
+                value: userProfile.name,
               ),
-            ),
 
-            const SizedBox(height: 120), // Space for bottom nav
-          ],
+              const SizedBox(height: 20),
+
+              // Phone Section
+              _buildProfileField(
+                label: 'Phone',
+                value: userProfile.phoneNumber,
+              ),
+              const SizedBox(height: 120), // Space for bottom nav
+            ],
+          ),
         ),
       ),
     );

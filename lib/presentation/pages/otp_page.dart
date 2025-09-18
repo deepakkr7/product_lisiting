@@ -234,7 +234,7 @@ class _OtpPageState extends State<OtpPage> {
                       ),
                     ),
 
-                    const Spacer(), // Pushes button to bottom
+                    const SizedBox(height: 30,), // Pushes button to bottom
 
                     BlocBuilder<AuthBloc, AuthState>(
                       builder: (context, state) {
